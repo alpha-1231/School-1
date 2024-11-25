@@ -1,0 +1,601 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-family: cursive;
+
+}
+
+
+@media (max-width:530px) {
+
+    body {
+        font-size: 6px;
+    }
+
+    .social-icon {
+        align-content: center;
+        justify-content: center;
+    }
+
+    .section-content-one {
+        font-size: smaller;
+    }
+
+    header .nav-section {
+        background-color: #8ec9c4;
+        position: static;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        text-align: center;
+        justify-content: center;
+        padding-bottom: 2rem;
+    }
+
+    header .nav-section .box-one-nav img {
+        height: 40%;
+        width: 10%;
+    }
+
+    header .nav-section .box-one-nav {
+        justify-content: center;
+        gap: 1.3rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    header .nav-section a {
+        font-size: 0.7rem;
+    }
+
+    body .services-section-main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .services-section-main .one-services-section {
+        width: 100%;
+    }
+
+    .image-show-case-section {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+
+    .image-show-case-section .main-image-area img {
+        width: 90vw;
+        object-fit: cover;
+
+    }
+
+    header .footer-section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+        text-align: center;
+        justify-content: space-evenly;
+        padding-top: 2rem;
+        background-color: #11192f;
+        color: #fff;
+        gap: 1rem;
+        padding-bottom: 4rem;
+    }
+
+
+    .footer-section>div {
+        width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-section .footer-three>h4 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width:530px) {
+    .image-show-case-section .other-information-section {
+        gap: 0rem;
+        max-width: 50%;
+        /* opacity: 0; */
+    }
+
+    .social-icon {
+        justify-content: start;
+    }
+
+    .footer-section {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-items: center;
+        justify-content: space-evenly;
+        padding-bottom: 4rem;
+        padding-top: 2rem;
+        background-color: #11192f;
+        color: #fff;
+        height: 22rem;
+
+    }
+}
+
+@media (max-width:1024px) {
+    html {
+        font-size: 10px;
+    }
+
+    .footer-two p {
+        font-size: 1rem;
+    }
+
+    .para-services-section p {
+        font-size: 1rem;
+    }
+
+    .image-show-case-section {
+        padding-top: 2rem;
+        background-color: #488357a8;
+        max-width: 1200px;
+    }
+
+    .main-four-head .list-container .one-list li {
+        font-size: 1rem;
+    }
+
+    .image-show-case-section .other-information-section {
+        gap: 0rem;
+    }
+
+    .main-five-head {
+        padding-bottom: 1rem;
+    }
+
+    .footer-three h4 {
+        font-size: 1.5rem;
+    }
+
+}
+
+body {
+    padding-top: 5rem;
+    /* Add some space equal to or greater than the navbar height */
+}
+
+ul {
+    list-style: none;
+}
+
+.end {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1300px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+/* header nav section styling */
+header {
+    position: fixed;
+    background-color: #423e3e;
+    width: 100%;
+    z-index: 2;
+    top: 0;
+}
+
+.nav-section {
+    /* background-color: #423e3e; */
+    position: static;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    /* Equal grid columns */
+    column-gap: 1rem;
+    grid-template-rows: 6rem;
+}
+
+.box-one-nav {
+    display: flex;
+    align-items: center;
+    grid-column: 1/3;
+
+}
+
+.box-one-nav img {
+    height: 80%;
+    border-radius: 20px;
+}
+
+.box-one-nav h1 {
+    color: rgb(255, 132, 0);
+    text-shadow: 1px 1px 1px black;
+    font-weight: normal;
+    font-style: italic;
+    font-size: 1rem;
+    /* Adjust for better visibility */
+    transition: 2sec linear;
+}
+
+.nav-section a {
+    background-color: #ffffff;
+    border-radius: 20px;
+    top: 0.5rem;
+    position: relative;
+    padding: 0.3rem;
+    font-size: 1rem;
+    border: 1px dotted red;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-weight: bold;
+    justify-self: end;
+    /* Ensures links align correctly */
+    display: block;
+    text-align: center;
+    padding: 0.6rem;
+    /* More padding for easier clickable area */
+}
+
+.nav-section a:hover {
+    background-color: rgba(167, 169, 170, 0.503);
+    color: #fff;
+}
+
+
+.one-link {
+    grid-column: 3/4;
+    align-self: anchor-center;
+}
+
+.two-link {
+    grid-column: 4/5;
+    align-self: anchor-center;
+}
+
+.three-link {
+    grid-column: 5/6;
+    align-self: anchor-center;
+}
+
+.four-link {
+    grid-column: 6/7;
+    align-self: anchor-center;
+}
+
+.five-link {
+    grid-column: 7/8;
+    align-self: anchor-center;
+}
+
+.six-link {
+    grid-column: 8/9;
+    align-self: anchor-center;
+    justify-self: center;
+}
+
+
+.nav-section container a:hover {
+    background-color: rgba(0, 187, 255, 0.503);
+}
+
+/* image roller section */
+.first-image-section {
+    height: 90vh;
+    background-color: #423e3e;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 1px 1px 22px rgb(235, 167, 167);
+}
+
+.image-container {
+    display: flex;
+    transition: transform 1s ease-in-out;
+    /* Smooth sliding transition */
+    gap: 10px;
+}
+
+.first-image-section img {
+    width: 100%;
+    image-rendering: crisp-edges;
+    object-fit: cover;
+    height: 90vh;
+    transition: transform 1s ease-in-out;
+    /* Smooth transition */
+}
+
+.inner-section-image {
+    background-color: #41343498;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    /* Enable flexbox for centering */
+    flex-direction: row;
+    justify-content: flex-start;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+}
+
+.content-section-image {
+    display: flex;
+    flex-direction: row;
+    /* Stack the content vertically */
+    opacity: 0;
+    /* Initially set opacity to 0 */
+    transform: translateY(-50px);
+    /* Start position: above the final position */
+    animation: slideFade 2s ease-out forwards;
+}
+
+.inner-content-one {
+    color: aqua;
+    font-size: 3em;
+    text-shadow: 1px 1px 12px black;
+
+}
+
+@keyframes slideFade {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+        /* Start above */
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        /* End position: normal */
+    }
+}
+
+.inner-content-two {
+    color: white;
+    font-size: 2em;
+    text-shadow: 1px 1px 12px black;
+}
+
+.inner-content-three {
+    color: yellow;
+    font-size: 2rem;
+    text-shadow: 1px 1px 12px black;
+}
+
+.inner-content-four button {
+    margin: 0.5em;
+}
+
+.section-content-two button {
+    margin: 0.5em;
+}
+
+/* button */
+/* General Button Styling */
+button {
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+button:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+/* Arrow Button Styling */
+button.arrow-left::before,
+button.arrow-right::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+}
+
+/* Left Arrow */
+button.arrow-left::before {
+    border-right: 12px solid #fff;
+    left: 10px;
+}
+
+/* Right Arrow */
+button.arrow-right::before {
+    border-left: 12px solid #fff;
+    right: 10px;
+}
+
+/* Optional: Adding a space between the text and the arrow */
+button.arrow-left span,
+button.arrow-right span {
+    margin: 0 12px;
+}
+
+/* services card section */
+.services-section-main {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+    justify-content: space-around;
+
+}
+
+.one-services-section {
+    background-color: #e6f9ff;
+    display: flex;
+    flex-direction: column;
+    width: 22%;
+    height: 20rem;
+    text-align: center;
+}
+
+
+.one-services-section:hover {
+    background-color: #90ffac;
+    transition: all 1.5s ease;
+    font-weight: bold;
+    border: 2px solid rgb(150, 150, 150);
+    transform: translateY(-10%);
+}
+
+.one-services-section .image-services {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.header-sevices {
+    font-size: 2rem;
+    height: 100%;
+}
+
+.heading-text {
+    color: #333;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.para-services-section {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.border-red {
+    border: 2px solid red;
+}
+
+/* image div section */
+.image-show-case-section {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    padding-bottom: 3rem;
+    width: 95%;
+    /* Ensure the container takes full width */
+}
+
+.main-image-area {
+    max-width: 50%;
+    /* Prevent it from growing beyond the container */
+    width: 45%;
+}
+
+.main-image-area img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.other-information-section {
+    display: flex;
+    flex-direction: column;
+    /* max-width: 50%; */
+    padding-left: 1rem;
+    height: 100%;
+    gap: 1rem;
+    background-color: #90bde078;
+    /* Prevent it from growing beyond the container */
+}
+
+.one-list ul,
+.two-list ul {
+    list-style: none;
+    padding-left: 0;
+    color: rgb(22, 47, 47);
+}
+
+.list-container {
+    display: flex;
+    /* Flexbox layout for the lists */
+    gap: 2rem;
+    /* Space between the lists */
+}
+
+.main-four-head {
+    font-size: 1.5rem;
+}
+
+.one-list ul li,
+.two-list ul li {
+    font-size: 1.5rem;
+}
+
+
+/* footer section */
+.footer-one {
+    display: flex;
+    flex-direction: column;
+    padding: 0.3rem;
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+
+.footer-one a {
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+
+
+.footer-section>div {
+    flex-basis: 20%;
+    height: 12rem;
+}
+
+.footer-two {
+    display: flex;
+    /* Align elements vertically */
+    flex-direction: column;
+}
+
+.footer-two p {
+    margin: 0;
+    padding: 0.3rem;
+}
+
+
+.social-icon {
+    display: flex;
+    gap: 15px;
+    flex: 1;
+    padding: 0.3rem;
+
+    align-items: baseline;
+}
+
+.social-icon a {
+    font-size: 20px;
+    /* Adjust the size of the icons */
+    text-decoration: none;
+    /* Remove default underline from links */
+    color: #333;
+    /* Set color for icons */
+}

@@ -1,0 +1,385 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ensure body takes the full height of the viewport */
+html,
+body {
+    margin: 0;
+    /* Remove default margin */
+}
+
+/* The main container takes full height */
+body {
+    display: flex;
+    flex-direction: column;
+
+}
+
+/* Your main content area */
+main {
+    flex: 1;
+    /* This allows the content to grow and take up available space */
+}
+
+/* Header / Navbar */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    /* Dark background for the navbar */
+    color: white;
+    /* Text color */
+    z-index: 1000;
+    /* Ensure it stays on top */
+    padding: 10px 0;
+    /* Vertical padding for spacing */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Optional shadow for a subtle effect */
+}
+
+
+
+.nav-section.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    /* Set a max width to center the nav */
+    margin: 0 auto;
+    padding: 0 20px;
+    /* Padding for left and right */
+}
+
+.box-one-nav {
+    display: flex;
+    align-items: center;
+}
+
+.box-one-nav img {
+    height: 30px;
+    /* Set a specific height for the logo */
+    margin-right: 15px;
+    /* Space between the logo and text */
+}
+
+.box-one-nav h1 {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0;
+}
+
+.nav-section a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.nav-section a:hover {
+    color: #f4a261;
+    /* Change color on hover */
+}
+
+/* Main content section */
+main {
+    height: fit-content;
+    padding-top: 100px;
+    /* Ensure this is equal to or greater than the height of the navbar */
+    padding: 20px;
+    /* Make sure the main content takes up full height */
+    border: 2px solid yellow;
+}
+
+.image-slider-section-gallery {
+    padding-bottom: 4rem;
+    height: auto;
+    padding-top: 65px;
+    background-color: #0b3464;
+}
+
+.image-controller {
+    margin-top: 2rem;
+    display: flex;
+    gap: 2rem;
+    padding: 20px;
+    border: 10px solid rgb(104, 122, 20);
+    background-color: aliceblue;
+    width: 100%;
+    height: 100%;
+
+}
+
+.image-controller .image-section {
+    background-color: #f4f4f4;
+    border: 3px solid #f73c3c;
+    overflow: hidden;
+}
+
+.control-buttons {
+    align-self: center;
+    /* flex: 1; */
+    display: flex;
+    /* align-items: flex-end; */
+    /* padding: 2rem; */
+    /* gap: 2rem; */
+    width: 100%;
+}
+
+.image-controller img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-controller .description {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+/* buttons */
+/* Style each button */
+button {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Dark semi-transparent background */
+    color: rgb(0, 0, 0);
+    /* White text */
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    margin: 0.3rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Add hover effect to buttons */
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #f4f4f4;
+}
+
+
+/* footer */
+/* Footer Section */
+
+.footer-section h2,
+.footer-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.footer-section h4 {
+    font-size: 1rem;
+    color: #f4a261;
+    /* A slightly different color for emphasis */
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+
+
+.footer-one,
+.footer-two {
+    margin-right: 5%;
+    /* Add space between sections */
+}
+
+.footer-one a,
+.footer-two a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin: 10px 0;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-one a:hover,
+.footer-two a:hover {
+    color: #f4a261;
+    /* Change color on hover */
+}
+
+/* Footer Icons (Social Media) */
+.social-icon {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.social-icon a {
+    color: white;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.social-icon a:hover {
+    color: #f4a261;
+    /* Change color on hover */
+}
+
+/* Map Section */
+.footer-four {
+    width: 100%;
+    /* Make the map section take full width */
+    margin-top: 20px;
+}
+
+#map {
+    height: 300px;
+    background-color: #ddd;
+    /* Placeholder color for map */
+    border-radius: 8px;
+}
+
+
+
+iframe {
+    height: 100%;
+    width: 100%;
+}
+
+
+@media (max-width:768px) {
+
+    .nav-section.container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+
+    .image-controller {
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .image-controller .description {
+        width: 100%;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 12px;
+        gap: 0px;
+    }
+
+    .media-embed-section {
+        background-color: #80024d;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 90vh;
+    }
+
+    .media-embed-section .youtube-section {
+        height: 48%;
+        width: 100%;
+    }
+
+    .media-embed-section .facebook-section {
+        height: 48%;
+        width: 100%;
+        cursor: pointer;
+    }
+
+    .image-slider-section-gallery {
+        width: fit-content;
+    }
+
+    .footer-section {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: #333;
+        /* Dark background for footer */
+        color: white;
+        /* White text */
+        padding: 40px 20px;
+        flex-wrap: wrap;
+        align-items: center;
+        text-align: center;
+        /* Ensure it wraps on small screens */
+    }
+
+    .footer-one,
+    .footer-two,
+    .footer-three,
+    .footer-four {
+        width: 100%;
+        /* Make each section take up 1/4th of the width */
+        margin-right: 2%;
+    }
+}
+
+@media (min-width: 768px) {
+    .image-controller .description {
+        width: 40%;
+    }
+
+    .footer-one,
+    .footer-two,
+    .footer-three,
+    .footer-four {
+        width: 23%;
+        /* Make each section take up 1/4th of the width */
+        margin-right: 2%;
+    }
+
+    .media-embed-section {
+        background-color: #80024d;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 50vh;
+
+    }
+
+    .footer-section {
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        background-color: #333;
+        /* Dark background for footer */
+        color: white;
+        /* White text */
+        padding: 40px 20px;
+        flex-wrap: wrap;
+        /* Ensure it wraps on small screens */
+    }
+
+    .media-embed-section .youtube-section {
+        width: 48%;
+        height: 100%;
+    }
+
+    .media-embed-section .facebook-section {
+        width: 48%;
+        height: 100%;
+    }
+
+    .container {
+        max-width: 1300px;
+        width: 95%;
+        margin: 0 auto;
+    }
+}

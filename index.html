@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./home/index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="./home/script.js" defer></script>
+    <script src="https://cdn.maptiler.com/maptiler-sdk-js/v2.3.0/maptiler-sdk.umd.js"></script>
+    <link href="https://cdn.maptiler.com/maptiler-sdk-js/v2.3.0/maptiler-sdk.css" rel="stylesheet" />
+    <style>
+        /* Ensure the map has a fixed size */
+        #map {
+            width: 100%;
+            height: 12rem;
+            background-color: antiquewhite;
+        }
+    </style>
+    <script>
+ window.onload = function () {
+            // Initialize the map with your API key
+            maptilersdk.config.apiKey = 'DS95dCIJTg0MBW5EtgPT'; // Make sure the key is correct
+
+            const map = new maptilersdk.Map({
+                container: 'map', // ID of the container for the map
+                style: maptilersdk.MapStyle.STREETS, // Style of the map
+                center: [83.11520202771946, 27.725397869841935], // Initial coordinates [lng, lat]
+                zoom: 9, // Initial zoom level
+            });
+
+            // Add a marker at the initial coordinates
+            const marker = new maptilersdk.Marker()
+                .setLngLat([83.11520202771946, 27.725397869841935]) // Coordinates for the marker
+                .addTo(map);
+
+            // Function to update the map and marker to new coordinates
+            function updateMap(newLng, newLat) {
+                // Update the map center
+                map.setCenter([newLng, newLat]);
+                
+                // Update the marker position
+                marker.setLngLat([newLng, newLat]);
+            }
+
+            // Example: Update the map and marker to the new location after 3 seconds
+            setTimeout(() => {
+                // New coordinates (you can replace this with any new coordinates)
+                const newLng = 83.11520202771946;
+                const newLat = 27.725397869841935;
+
+                // Call the function to update the map and marker
+                updateMap(newLng, newLat);
+            }, 3000); // Update after 3 seconds for demonstration
+        }
+
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="nav-section container">
+            <div class="box-one-nav ">
+                <img src="./Images/logo/logo.jpg" id="" buddha-image
+                display:inline-block; border-radius: 20px;" alt="Logo">
+                <h1 style="display: inline; text-transform: uppercase; text-align: center;">Shree
+                    Sagarmatha Vidhya Mandir
+                </h1>
+            </div>
+            <a href="#" class="one-link">Home</a>
+            <a href="#about" class="two-link">About</a>
+            <a href="tel:9765862407" class="three-link">Contact</a>
+            <a href="https://www.youtube.com/channel/UCbv-Glv9UhrYNkxqldwnIOg" target="_blank" class="four-link">Events</a>
+            <a href="./Gallery/gallery.html" class="five-link">Gallery</a>
+            <a href="https://maps.app.goo.gl/wpUYD59RD6KyST359" class="six-link">Visit</a>
+        </div>
+    </header>
+    <div class="image-roller-with-buttons">
+        <div class="first-image-section">
+            <div class="image-container">
+                <img src="" alt="" id="buddha-image">
+            </div> <!-- The images will be inserted here dynamically -->
+            <div class="inner-section-image">
+                <div class="content-section-image container">
+                    <div class="section-content-one">
+                        <div class="inner-content-one">Best classes</div>
+                        <div class="inner-content-two">Quality in the Education from twenty years</div>
+                        <div class="inner-content-three">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi
+                            corrupti a esse rerum commodi facere iste sapiente at, quis adipisci?
+                        </div>
+                        <div class="inner-content-four">
+                            <button class="btn btn-primary box-shadow m-2">Call-Us</button>
+                            <button class="btn btn-success m-2">Visit</button>
+                        </div>
+                    </div>
+                    <div class="section-content-two">
+                        <button id="prev-btn"><i class="fas fa-chevron-left"></i></button>
+                        <button id="next-btn"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="services-section-main">
+        <div class="one-services-section">
+            <div class="image-services">
+                <i class="fas fa-graduation-cap icon" style=" font-size: 60px;"></i>
+            </div>
+            <div class="heading-text">
+                <h1 class="header-sevices">Skilled Instructers</h1>
+            </div>
+            <div class="para-services-section">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Repellendus dolore
+                </p>
+            </div>
+        </div>
+        <div class="one-services-section">
+            <div class="image-services">
+                <i class="fas fa-globe icon" style=" font-size: 60px;"></i>
+            </div>
+            <div class="heading-text">
+                <h1 class="header-sevices">Online Classes</h1>
+            </div>
+            <div class="para-services-section">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Repellendus dolore
+                </p>
+            </div>
+        </div>
+        <div class="one-services-section">
+            <div class="image-services">
+                <i class="fas fa-house icon" style=" font-size: 60px;"></i>
+            </div>
+            <div class="heading-text">
+                <h1 class="header-sevices">Fun Projects</h1>
+            </div>
+            <div class="para-services-section">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Repellendus
+                </p>
+            </div>
+        </div>
+        <div class="one-services-section">
+            <div class="image-services">
+                <i class="fas fa-book icon" style=" font-size: 60px;"></i>
+            </div>
+            <div class="heading-text">
+                <h1 class="header-sevices">Books Library</h1>
+            </div>
+            <div class="para-services-section">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Repellendus
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="image-show-case-section container" id="about">
+        <div class="main-image-area">
+            <img src="./Images/main.jpg" alt="" srcset="">
+        </div>
+        <div class="other-information-section">
+            <div class="main-one-head fs-1">
+                ABOUT US -----
+            </div>
+            <div class="main-two-head fs-3"> Welcome to Shree Sagarmatha Vishya Mandir </div>
+            <div class="main-three-head">
+                <p class="fs-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur inventore nisi
+                    voluptate
+                    laboriosam alias quas modi offificia ullam molestiae, quidem veniam accusantium
+                    repudiandae repellendus deserunt incidunt aperiam ad quo vero explicabo dolore ipsum eligendi porro
+                    fugiat magni voluptates aliquam. Id commodi, voo?</p>
+            </div>
+            <div class="main-four-head">
+                <div class="list-container">
+                    <div class="one-list">
+                        <ul>
+                            <li><i class="fas fa-arrow-right"></i> "Skilled Instructors"</li>
+                            <li><i class="fas fa-arrow-right"></i> "Certificate provision"</li>
+                            <li><i class="fas fa-arrow-right"></i> "Online classes"</li>
+                        </ul>
+                    </div>
+                    <div class="one-list">
+                        <ul>
+                            <li><i class="fas fa-arrow-right"></i> "Skilled Instructors"</li>
+                            <li><i class="fas fa-arrow-right"></i> "Certificate provision"</li>
+                            <li><i class="fas fa-arrow-right"></i> "Online classes"</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="main-five-head">
+                <button class="btn btn-primary ">Read More</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="gallery-section">
+        
+    </div>
+
+    <footer class="footer-section">
+        <div class="footer-one">
+            <h2>Quick Link</h2>
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Home</a>
+        </div>
+        <div class="footer-two">
+            <h2>Contact</h2>
+            <p><i class="fas fa-location icon"></i>- Lorem, ipsum dolor.</p>
+            <p><i class="fas fa-phone icon"></i> - +977 000-0999-777</p>
+            <p><i class="fas fa-envelope icon"></i> - info@gmail.com</p>
+            <div class="social-icon">
+                <a
+                    href="https://www.bing.com/ck/a?!&&p=f5b9e77c63bab31683faf8bd413285850c068ef2bdb9f56e2311d313bfd13ebaJmltdHM9MTczMTgwMTYwMA&ptn=3&ver=2&hsh=4&fclid=36530f72-c3bb-6399-3462-1a4ac2bd6295&psq=shree+sagarmatha+vishya+mandir+facebook&u=a1aHR0cHM6Ly93d3cuZmFjZWJvb2suY29tLzEwMDA2MzQ3MzYwNzEyMS92aWRlb3MvODkwNjc2ODE5ODczMTY4Lw&ntb=1"><i
+                        class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.youtube.com/channel/UCbv-Glv9UhrYNkxqldwnIOg"><i
+                        class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+        <div class="footer-three">
+            <h3>Principal:</h3>
+            <h4 style="text-transform: capitalize; font-style: italic;">: Chhatra-Mani Pandey</h4>
+            <h3>Vice-Principal</h3>
+            <h4 style="text-transform: capitalize; font-style: italic;">: Netra Prasad Budathoki</h4>
+            <h4>Phone:9898989898</h4>
+        </div>
+        <div class="footer-four">
+            <div id="map"></div>
+        </div>
+    </footer>
+</body>
+
+</html>

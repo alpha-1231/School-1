@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image-Gallery</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- <script src="./script/script-gallery.js" defer></script> -->
+    <script src="https://cdn.maptiler.com/maptiler-sdk-js/v2.3.0/maptiler-sdk.umd.js"></script>
+    <link href="https://cdn.maptiler.com/maptiler-sdk-js/v2.3.0/maptiler-sdk.css" rel="stylesheet" />
+    <style>
+        /* Ensure the map has a fixed size */
+        #map {
+            width: 100%;
+            height: 12rem;
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="nav-section container">
+            <div class="box-one-nav">
+                <img src="../Images/logo/logo.jpg" id="buddha-image"
+                    style=" display: inline-block; border-radius: 20px;" alt="Logo">
+                <h1 style="display: inline; text-transform: uppercase; text-align: center;">Shree Sagarmatha Vidhya
+                    Mandir</h1>
+            </div>
+            <a href="../index.html" class="one-link">Home</a>
+            <a href="../index.html" class="two-link">About</a>
+            <a href="tel:9765862407" class="three-link">Contact</a>
+            <a href="https://www.youtube.com/channel/UCbv-Glv9UhrYNkxqldwnIOg" target="_blank"
+                class="four-link">Events</a>
+            <a href="#" class="five-link">Gallery</a>
+            <a href="https://maps.app.goo.gl/wpUYD59RD6KyST359" class="six-link">Visit</a>
+        </div>
+    </header>
+
+    <main class="image-slider-section-gallery container">
+        <div class="image-controller">
+            <div class="image-section"><img src="../Images/alisha.jpg" alt="" srcset="" id="currentImage"></div>
+            <div class="description">
+                <h1>Description:</h1>
+                <p  id="descriptionText">Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit. Dolorem
+                    molestias, perspiciatis adipisci
+                    iusto et quis ipsam culpa soluta rerum aspernatur illum autem consectetur! Obcaecati aspernatur
+                    facere praesentium quo nobis molestiae, voluptatibus exercitationem delectus reiciendis beatae
+                    blanditiis distinctio sunt quaerat minus adipisci deserunt ratione natus! Dignissimos, error labore?
+                    Odio, accusantium inventore. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum, est?</p>
+                <div class="control-buttons">
+                    <button class="prev" id="prev-btn">Previous</button>
+                    <button class="Next" id="next-btn">Next</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="media-embed-section container">
+        <div class="youtube-section">
+            <iframe src="https://www.youtube.com/embed/ipsHIHdSHtE?si=Gt-fSjMnM7JN3P3b" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="facebook-section">
+            <iframe
+                src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D100063473607121%26mibextid%3DZbWKwL&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+                width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                allowfullscreen="true"
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+        </div>
+    </div>
+
+
+    <footer class="footer-section">
+        <div class="footer-one">
+            <h2>Quick Link</h2>
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Home</a>
+        </div>
+        <div class="footer-two">
+            <h2>Contact</h2>
+            <p><i class="fas fa-location icon"> - Lorem, ipsum dolor.</i></p>
+            <p><i class="fas fa-phone icon"> - +977 000-0999-777</i></p>
+            <p><i class="fas fa-envelope icon"></i> - info@gmail.com</p>
+            <div class="social-icon">
+                <a
+                    href="https://www.bing.com/ck/a?!&&p=f5b9e77c63bab31683faf8bd413285850c068ef2bdb9f56e2311d313bfd13ebaJmltdHM9MTczMTgwMTYwMA&ptn=3&ver=2&hsh=4&fclid=36530f72-c3bb-6399-3462-1a4ac2bd6295&psq=shree+sagarmatha+vishya+mandir+facebook&u=a1aHR0cHM6Ly93d3cuZmFjZWJvb2suY29tLzEwMDA2MzQ3MzYwNzEyMS92aWRlb3MvODkwNjc2ODE5ODczMTY4Lw&ntb=1"><i
+                        class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.youtube.com/channel/UCbv-Glv9UhrYNkxqldwnIOg"><i
+                        class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+        <div class="footer-three">
+            <h3>Principal:</h3>
+            <h4 style="text-transform: capitalize; font-style: italic;">: Chhatra-Mani Pandey</h4>
+            <h3>Vice-Principal</h3>
+            <h4 style="text-transform: capitalize; font-style: italic;">: Netra Prasad Budathoki</h4>
+            <h4>Phone:9898989898</h4>
+        </div>
+        <div class="footer-four">
+            <div id="map"></div>
+        </div>
+    </footer>
+    <script>
+        window.onload = function () {
+            // Initialize the map with your API key
+            maptilersdk.config.apiKey = 'DS95dCIJTg0MBW5EtgPT'; // Make sure the key is correct
+
+            const map = new maptilersdk.Map({
+                container: 'map', // ID of the container for the map
+                style: maptilersdk.MapStyle.STREETS, // Style of the map
+                center: [83.11520202771946, 27.725397869841935], // Initial coordinates [lng, lat]
+                zoom: 9, // Initial zoom level
+            });
+
+            // Add a marker at the initial coordinates
+            const marker = new maptilersdk.Marker()
+                .setLngLat([83.11520202771946, 27.725397869841935]) // Coordinates for the marker
+                .addTo(map);
+
+            // Function to update the map and marker to new coordinates
+            function updateMap(newLng, newLat) {
+                // Update the map center
+                map.setCenter([newLng, newLat]);
+
+                // Update the marker position
+                marker.setLngLat([newLng, newLat]);
+            }
+
+            // Example: Update the map and marker to the new location after 3 seconds
+            setTimeout(() => {
+                // New coordinates (you can replace this with any new coordinates)
+                const newLng = 83.11520202771946;
+                const newLat = 27.725397869841935;
+
+                // Call the function to update the map and marker
+                updateMap(newLng, newLat);
+            }, 3000); // Update after 3 seconds for demonstration
+        }
+
+        let images = [
+            '../Images/akak.jpg', '../Images/alisha.jpg',
+            '../Images/amrit.jpg', '../Images/arjun.jpg',
+            '../Images/basic-result.jpg', '../Images/buddha-Tour.jpg',
+            '../Images/chautari.jpg', '../Images/class ten.jpg',
+            '../Images/cycle.jpg', '../Images/food.jpg',
+            '../Images/main.jpg',
+            '../Images/nam.jpg', '../Images/nepal.jpg',
+            '../Images/netra.jpg', '../Images/program.jpg',
+            '../Images/result-otherr.jpg', '../Images/result.jpg',
+            '../Images/running.jpg', '../Images/sars.jpg',
+            '../Images/school.jpg', '../Images/smile.jpg',
+            '../Images/sports.jpg', '../Images/staff-other.jpg',
+            '../Images/staff.jpg', '../Images/teej.jpg',
+            '../Images/tilaura-dhyan.jpg', '../Images/tilaurakot.jpg',
+            '../Images/whole.jpg', '../Images/wholestu.jpg'
+        ]
+
+
+        // Get the image element and buttons
+        const imageElement = document.getElementById("currentImage");
+        const prevButton = document.getElementById("prev-btn");
+        const nextButton = document.getElementById("next-btn");
+
+        let currentIndex = 0; // Keep track of the current image index
+
+        // Function to update the image
+        function updateImage(index) {
+            // Ensure the index stays within bounds of the images array
+            if (index < 0) {
+                currentIndex = images.length - 1; // Loop back to the last image
+            } else if (index >= images.length) {
+                currentIndex = 0; // Loop back to the first image
+            } else {
+                currentIndex = index;
+            }
+
+            // Change the image src to the current image
+            imageElement.src = images[currentIndex];
+        }
+
+        // Event listeners for the buttons
+        prevButton.addEventListener("click", () => {
+            updateImage(currentIndex - 1); // Move to the previous image
+        });
+
+        nextButton.addEventListener("click", () => {
+            updateImage(currentIndex + 1); // Move to the next image
+        });
+
+        // Optional: You can call updateImage to set an initial image when the page loads
+        updateImage(currentIndex); // Start at the first image
+    </script>
+</body>
+
+</html>
